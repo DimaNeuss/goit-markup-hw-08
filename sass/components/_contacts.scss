@@ -1,0 +1,47 @@
+/*коннтакты*/
+.contacts {
+  margin-left: auto;
+  align-items: center;
+  &__icon {
+    margin-right: 10px;
+  }
+  &__link {
+    color: $primary-text-color;
+    @include style(500, 14px, 1.1);
+    font-style: normal;
+    align-items: center;
+    fill: $primary-text-color;
+    transition: fill 250ms $timing-function;
+    transition: color 250ms $timing-function;
+  }
+}
+.contacts__link:hover,
+.contacts__link:focus {
+  color: $accent-color;
+  fill: $accent-color;
+}
+.contacts__link:last-child {
+  margin-left: 30px;
+}
+
+/*коннтакты footer*/
+.contacts-footer {
+  &__link {
+    background: $background-color;
+    color: $color-contacts-footer-link;
+    @include style(400, 14px, 1.8);
+    font-style: normal;
+    margin-top: 9px;
+    display: inline-block;
+    transition: color 250ms $timing-function;
+  }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &__address {
+    color: $whitе-color-text;
+    @include style(400, 14px, 1.8);
+    font-style: normal;
+  }
+}

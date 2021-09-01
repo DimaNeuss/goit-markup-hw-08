@@ -1,0 +1,24 @@
+/* Hero*/
+.hero {
+  background-color: $background-color;
+  text-align: center;
+  padding: 200px 0;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      to right,
+      $background-image-color,
+      $background-image-color,
+      $background-image-color
+    ),
+    url(../images/new-Img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &__title {
+    color: $whitе-color-text;
+    @include style(900, 44px, 1.3);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+}

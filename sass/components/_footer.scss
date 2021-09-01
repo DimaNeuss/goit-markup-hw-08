@@ -1,0 +1,44 @@
+.footer {
+  justify-content: center;
+  text-align: center;
+  background: $background-color;
+  padding: 60px 0;
+  &-address {
+    margin-bottom: 60px;
+  }
+  &__social {
+    margin-bottom: 60px;
+  }
+  &__disription {
+    margin: 0;
+    margin-bottom: 20px;
+    height: 16px;
+    @include style(700, 14px, 1.2);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $whitе-color-text;
+  }
+}
+.subscribe-form {
+  &__input {
+    margin-bottom: 20px;
+    padding: 8px;
+    width: 358px;
+    height: 50px;
+    color: rgba(255, 255, 255, 0.6);
+    @include border(1px, rgba(255, 255, 255, 0.3));
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background: transparent;
+  }
+  &__button {
+    align-items: center;
+    margin-left: 10px;
+  }
+  &__icon {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+  }
+}

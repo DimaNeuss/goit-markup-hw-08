@@ -1,0 +1,22 @@
+.work {
+  flex-basis: calc(100% / 3);
+  justify-content: space-between;
+  padding-top: 0px;
+  display: none;
+  &__title {
+    position: relative;
+  }
+  &__box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 27px;
+    background-color: $background-icon-work;
+  }
+  &__text {
+    @include style(700, 14px, 1.2);
+    text-align: center;
+    text-transform: uppercase;
+    color: $whitе-color-text;
+  }
+}

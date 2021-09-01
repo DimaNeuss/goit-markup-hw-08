@@ -1,0 +1,42 @@
+/*особенности*/
+.features {
+  @media screen and (min-width: $desktop) {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    @include style(700, 14px, 1.2);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  &__text {
+    color: $primary-text-color;
+    @include style(500, 14px, 1.8);
+  }
+  &__item {
+    margin-bottom: 30px;
+    @media screen and (min-width: $tablet) {
+      width: calc((100% -2 * 15px) / 2);
+      @media screen and (min-width: $desktop) {
+        flex-basis: calc(100% / 3 - 120px);
+      }
+    }
+
+    &__item:last-child {
+      margin-left: 0px;
+    }
+  }
+  &__icon {
+    padding: 25px 100px;
+    background: $filter__background-color;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}

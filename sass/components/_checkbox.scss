@@ -1,0 +1,28 @@
+.checkbox {
+  margin: 20px 0 30px 12px;
+  &__label {
+    display: inline-block;
+    @include style(400, 14px, 1.8);
+    color: $primary-text-color;
+    letter-spacing: 0.03em;
+    appearance: none;
+    position: absolute;
+  }
+  &__policy::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+    @include border(2px, $second-color);
+    border-radius: 4px;
+    transition: background-color 250ms $timing-function;
+    transition: border 250ms $timing-function;
+  }
+  &__label:checked + &__policy::before {
+    border-color: $accent-color;
+    background-color: $accent-color;
+    background-image: url(../images/Vector.svg);
+    background-origin: border-box;
+    background-size: contain;
+  }
+}

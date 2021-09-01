@@ -1,0 +1,14 @@
+%flex {
+  display: flex;
+}
+%box-shadow {
+  box-shadow: $box-shadow;
+}
+%social-icon {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}

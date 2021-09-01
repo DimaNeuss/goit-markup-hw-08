@@ -1,0 +1,26 @@
+/*постоянные клиенты*/
+.client {
+  @extend %flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+  &__item {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  &__icon {
+    display: block;
+    padding: 12px 36px;
+    border: none;
+    fill: $fill-icon;
+    @include border(1px, $fill-icon);
+    border-radius: 4px;
+    transition: border 250ms $timing-function;
+    transition: fill 250ms $timing-function;
+  }
+  &__icon:hover,
+  &__icon:focus {
+    fill: $accent-color;
+    @include border(1px, $accent-color);
+  }
+}

@@ -1,0 +1,32 @@
+.social-links {
+  @extend %flex;
+  justify-content: center;
+  text-align: center;
+  @media screen and (min-width: $mobile) {
+    padding: 16px 0 24px 0;
+  }
+  &--footer {
+    padding: 0;
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+  &__icon {
+    @extend %flex;
+    @extend %social-icon;
+    fill: $fill-icon;
+    transition: background-color 250ms $timing-function;
+    transition: transform 250ms $timing-function;
+    margin-left: 10px;
+  }
+  &__icon:hover,
+  &__icon:focus {
+    background-color: $accent-color;
+    fill: $whitе-color-text;
+  }
+  &__icon--footer {
+    fill: $whitе-color-text;
+    background-color: $background-footer-link;
+    transition: background-color 250ms $timing-function;
+  }
+}
