@@ -2,7 +2,12 @@
   flex-basis: calc(100% / 3);
   justify-content: space-between;
   padding-top: 0px;
-  display: none;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
   &__title {
     position: relative;
   }

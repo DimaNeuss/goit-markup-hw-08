@@ -29,6 +29,18 @@ a {
 
 .header {
   align-items: center;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+.page-header {
+  border-bottom: 1px solid $header-line-color;
+  @media screen and (max-width: 767px) {
+    padding: 16px 0 16px 0;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 16px;
+  }
 }
 
 .title {
@@ -58,14 +70,19 @@ a {
     }
   }
 }
-.page-header {
-  border-bottom: 1px solid $header-line-color;
-  padding: 16px 0 16px 0;
-}
+
 .section {
   padding: 60px 0;
   &--work {
-    display: none;
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
+    @media screen and (min-width: $desktop) {
+      display: flex;
+    }
+  }
+  &--team {
+    background: $filter__background-color;
   }
 }
 .text-hidden {
@@ -75,9 +92,7 @@ a {
 input {
   outline: none;
 }
-.section-team {
-  background: $filter__background-color;
-}
+
 .footer-logo {
   margin-bottom: 20px;
 }
