@@ -27,6 +27,7 @@
   border-radius: 4px;
   padding: 6px 22px;
   margin-left: 8px;
+  margin-bottom: 15px;
   @include border(0px, transparent);
   transition: background-color 250ms $timing-function;
   transition: box-shadow 250ms $timing-function;
