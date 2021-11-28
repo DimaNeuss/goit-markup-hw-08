@@ -1,24 +1,16 @@
 /*постоянные клиенты*/
 .client {
-  @extend %flex;
+  display: flex;
   flex-wrap: wrap;
-  text-align: center;
   justify-content: space-between;
-  @media screen and (min-width: $tablet) {
-    margin: -15px;
-  }
-  @media (min-width: $desktop) {
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
   }
   &__item {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 30px;
+    @media (min-width: $mobile) {
+      margin: 5px;
     }
     @media screen and (min-width: $tablet) {
-      flex-basis: calc((100% - 60px) / 2);
-      margin: 15px;
-    }
-    @media (min-width: $desktop) {
-      flex-basis: calc((100% - 180px) / 6);
       margin: 15px;
     }
   }

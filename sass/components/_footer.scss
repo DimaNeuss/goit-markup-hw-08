@@ -1,26 +1,26 @@
 .footer {
-  justify-content: center;
-  text-align: center;
   background: $background-color;
   padding: 60px 0;
   &__box {
-    @media screen and (min-width: $tablet) {
+    @media screen and (min-width: $mobile) {
       display: flex;
       flex-wrap: wrap;
-    }
-  }
-  &-address {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 60px;
+      flex-direction: column;
+      align-items: center;
     }
     @media screen and (min-width: $tablet) {
-      flex-basis: calc((100% - 120px) / 2);
-      margin: 30px;
+      flex-direction: row;
+      justify-content: space-between;
     }
     @media screen and (min-width: $desktop) {
-      flex-basis: calc((100% - 120px) / 3);
-      margin: 30px;
+      flex-wrap: nowrap;
     }
+  }
+  &__address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
   }
   &__social {
     @media screen and (max-width: 767px) {
@@ -29,10 +29,16 @@
     @media screen and (min-width: $tablet) {
       flex-basis: calc((100% - 120px) / 2);
       margin: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
     @media screen and (min-width: $desktop) {
       flex-basis: calc((100% - 120px) / 3);
       margin: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
   &__form {
@@ -42,13 +48,16 @@
     }
     @media screen and (min-width: $desktop) {
       flex-basis: calc((100% - 120px) / 3);
-      margin: 30px;
+      margin: auto;
     }
   }
   &__disription {
     margin: 0;
     margin-bottom: 20px;
     height: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include style(700, 14px, 1.2);
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -56,9 +65,12 @@
   }
 }
 .subscribe-form {
+  @extend %flex;
+  justify-content: space-between;
   &__input {
-    margin-bottom: 20px;
+    margin-left: 0;
     padding: 8px;
+    @extend %flex;
     width: 358px;
     height: 50px;
     color: rgba(255, 255, 255, 0.6);
@@ -69,7 +81,9 @@
     background: transparent;
   }
   &__button {
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin-left: 10px;
   }
   &__icon {

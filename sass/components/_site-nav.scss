@@ -1,5 +1,6 @@
 /* позиционирование nav */
 .site-nav {
+  @extend %flex;
   margin-left: 93px;
   &__item {
     margin-right: 50px;

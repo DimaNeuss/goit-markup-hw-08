@@ -18,7 +18,7 @@
 }
 .modal {
   padding: 40px;
-  width: 528px;
+  width: 450px;
   min-height: 581px;
   background-color: $whitе-color-text;
   position: absolute;
@@ -27,8 +27,12 @@
   transform: translate(-50%, -50%) scale(1);
   border-radius: 4px;
   transition: transform 250ms $timing-function;
+  @media (min-width: $desktop) {
+    width: 528px;
+  }
   &__button-close {
     position: absolute;
+    @extend %flex;
     justify-content: center;
     align-items: center;
     width: 30px;

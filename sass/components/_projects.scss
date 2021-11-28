@@ -1,6 +1,8 @@
 /*проекты*/
 .projects {
   color: $text-color;
+  margin-top: -30px;
+  margin-left: -30px;
   @include style(700, 18px, 2);
   @media screen and (min-width: $tablet) {
     display: flex;
@@ -9,6 +11,7 @@
   }
   @media screen and (min-width: $desktop) {
   }
+
   &__title {
     @include style(700, 18px, 2);
     color: $second-color;
@@ -44,6 +47,7 @@
   }
   &__link {
     position: relative;
+    display: block;
     @include transition(box-shadow);
   }
   &__link:hover,
@@ -55,6 +59,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
+    @extend %flex;
     align-items: center;
     background-color: $background-projects;
     transform: translateY(0);

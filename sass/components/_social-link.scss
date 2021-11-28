@@ -1,10 +1,7 @@
 .social-links {
   @extend %flex;
   justify-content: center;
-  text-align: center;
-  @media screen and (min-width: $mobile) {
-    padding: 16px 0 24px 0;
-  }
+  padding: 16px 32px 0 32px;
   &--footer {
     padding: 0;
   }
@@ -17,7 +14,6 @@
     fill: $fill-icon;
     transition: background-color 250ms $timing-function;
     transition: transform 250ms $timing-function;
-    margin-left: 10px;
   }
   &__icon:hover,
   &__icon:focus {

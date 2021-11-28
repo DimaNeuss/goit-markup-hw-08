@@ -4,11 +4,13 @@
   background-color: $accent-color;
   font-family: inherit;
   @include style(700, 16px, 1.8);
+  max-height: 50px;
   display: inline-block;
   align-items: center;
   cursor: pointer;
   border-radius: 4px;
   padding: 10px 32px;
+  min-width: 200px;
   @include border(1px, transparent);
   transition: background-color 250ms $timing-function;
   &:hover,
@@ -27,7 +29,6 @@
   border-radius: 4px;
   padding: 6px 22px;
   margin-left: 8px;
-  margin-bottom: 15px;
   @include border(0px, transparent);
   transition: background-color 250ms $timing-function;
   transition: box-shadow 250ms $timing-function;

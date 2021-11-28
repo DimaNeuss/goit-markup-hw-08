@@ -1,9 +1,9 @@
 /*особенности*/
 .features {
+  text-align: center;
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
     justify-content: space-between;
     margin: -15px;
   }
@@ -15,7 +15,6 @@
     @include style(700, 14px, 1.2);
     text-transform: uppercase;
     margin-bottom: 10px;
-    text-align: center;
   }
   &__text {
     color: $primary-text-color;
@@ -34,12 +33,16 @@
       margin: 15px;
     }
   }
-
+  &__item:last-child {
+    margin-left: 0px;
+  }
   &__icon {
     padding: 25px 100px;
     background: $filter__background-color;
     border-radius: 4px;
     margin-bottom: 30px;
-    text-align: center;
   }
+}
+.title__work {
+  display: none;
 }
