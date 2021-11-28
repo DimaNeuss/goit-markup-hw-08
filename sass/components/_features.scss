@@ -43,6 +43,8 @@
     margin-bottom: 30px;
   }
 }
-.title__work {
-  display: none;
+.section__work {
+  @media screen and (max-width: $desktop) {
+    display: none;
+  }
 }

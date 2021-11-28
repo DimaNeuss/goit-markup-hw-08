@@ -1,0 +1,46 @@
+.menu-btn,
+.close-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  line-height: 0;
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+.menu-icon,
+.close-icon {
+  width: 40px;
+  height: 40px;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.menu-btn,
+.close-btn:hover,
+.menu-btn,
+.close-btn:focus {
+  color: $accent-color;
+  fill: $accent-color;
+}
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: $whitе-color-text;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.mobile-menu .is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}

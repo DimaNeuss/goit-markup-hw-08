@@ -29,6 +29,10 @@ a {
 
 .header {
   align-items: center;
+  @media screen and (max-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
   @media screen and (min-width: $tablet) {
     display: flex;
   }
